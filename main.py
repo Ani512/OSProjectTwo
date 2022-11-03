@@ -63,7 +63,7 @@ def customerRun(customer, tellerQueue):
         printUsingLock(f"{customer} wants to WITHDRAW")
     customer.setTransactionType(transactionType)
     # customer takes some time to go to the bank
-    time.sleep(random.uniform(0.05, 0.1))
+    time.sleep(random.uniform(0, 2.5))
     printUsingLock(f"{customer} is going to the bank")
     try:
         printUsingLock(f"{customer} is getting in line")
@@ -173,5 +173,3 @@ if __name__ == '__main__':
 # starting the customer threads
     for custThread in customerThreadList:
         custThread.start()
-
-    printUsingLock("Bank is closing for the day")
