@@ -3,7 +3,7 @@ from queue import Queue, Empty
 import random
 import time
 
-maxCustomers = 10
+maxCustomers = 50
 
 # the list stores the state of the teller -> (false if free)
 totalTellers = [False, False, False]
