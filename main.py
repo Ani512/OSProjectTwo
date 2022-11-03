@@ -1,3 +1,4 @@
+# AMU180000
 from threading import Semaphore, Thread, Lock
 from queue import Queue, Empty
 import random
@@ -63,7 +64,7 @@ def customerRun(customer, tellerQueue):
         printUsingLock(f"{customer} wants to WITHDRAW")
     customer.setTransactionType(transactionType)
     # customer takes some time to go to the bank
-    time.sleep(random.uniform(0, 2.5))
+    time.sleep(random.uniform(0.05, 0.10))
     printUsingLock(f"{customer} is going to the bank")
     try:
         printUsingLock(f"{customer} is getting in line")
